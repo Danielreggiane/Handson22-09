@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.println("1- Somar");
+        System.out.println("2- Subtrair");
+        System.out.println("3- Multiplicar");
+        System.out.println("4- Dividir");
+
+        System.out.print("Escolha uma opcao: ");
+        int opcao = leitor.nextInt();
+
+        System.out.print("Digite o primeiro numero: ");
+        double num1 = leitor.nextDouble();
+
+        System.out.print("Digite o segundo numero: ");
+        double num2 = leitor.nextDouble();
+
+        if (opcao == 1) {
+            double resultado = num1 + num2;
+            System.out.println("Resultado: " + resultado);
+        } else if (opcao == 2) {
+            double resultado = num1 - num2;
+            System.out.println("Resultado: " + resultado);
+        } else if (opcao == 3) {
+            double resultado = num1 * num2;
+            System.out.println("Resultado: " + resultado);
+        } else if (opcao == 4) {
+            if (num2 == 0) {
+                System.out.println("Erro: Nao e possivel dividir por zero!");
+            } else {
+                double resultado = num1 / num2;
+                System.out.println("Resultado: " + resultado);
+            }
+        } else {
+            System.out.println("Opcao invalida!");
+        }
+
+        leitor.close();
+    }
+}
