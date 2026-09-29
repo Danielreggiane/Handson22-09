@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class ValidarNota {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.print("Digite uma nota entre 0 e 100: ");
+        double nota = leitor.nextDouble();
+
+        while (nota < 0 || nota > 100) {
+            System.out.print("Nota invalida! Digite novamente: ");
+            nota = leitor.nextDouble();
+        }
+
+        System.out.println("Nota valida digitada: " + nota);
+
+        leitor.close();
+    }
+}
